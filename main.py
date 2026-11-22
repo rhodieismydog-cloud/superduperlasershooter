@@ -6,6 +6,18 @@ TITLE = "Star Defender"
 
 MENU_OPTIONS = ["Play", "How to Play", "Quit"]
 
+class Ship(arcade.Sprite):
+    def __init__(self, image, scale):
+        super().__init__(":resources:images/space_shooter/playerShip1_orange.png", scale=0.5)
+        self.fuel = 100
+
+    def update(self,delta_time: float = 1/60):
+        #todo: move,burn fuel
+
+    def update(self):
+        self.center_x += self.change_x
+        self.center_y += self.change_y
+
 
 class MenuView(arcade.View):
     def __init__(self):
